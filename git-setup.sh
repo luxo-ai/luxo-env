@@ -30,5 +30,7 @@ echo "Setting credentials helper"
 git config --global credential.helper "osxkeychain"
 echo "Setting default branch to main"
 git config --global init.defaultBranch "main"
+echo "Setting up signed commits"
+git config --global commit.gpgsign true
 
 echo "done"
