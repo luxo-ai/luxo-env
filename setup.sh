@@ -5,7 +5,7 @@ brew install jq \
 	httpie \
 	nvm \
 	python3 \
-	gpg
+	gnupg
 
 
 # yarn for javascript/typescript development
