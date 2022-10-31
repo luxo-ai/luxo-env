@@ -4,7 +4,8 @@ brew update
 brew install jq \
 	httpie \
 	nvm \
-	python3
+	python3 \
+	gpg
 
 
 # yarn for javascript/typescript development
