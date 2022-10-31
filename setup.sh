@@ -5,7 +5,8 @@ brew install jq \
 	httpie \
 	nvm \
 	python3 \
-	gnupg
+	gnupg \
+	pinentry-mac
 
 
 # yarn for javascript/typescript development
