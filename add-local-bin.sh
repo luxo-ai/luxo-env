@@ -8,7 +8,7 @@ if [[ ":$PATH:" != *":${LOCAL_BINS}:"* ]];
 then
     mkdir -p ${LOCAL_BINS}
     cat << EOF >> ~/.zshrc
-# added automatically bt the add-local-bin.sh script
+# added automatically by the add-local-bin.sh script
 export PATH=${PATH:+"$PATH:"}${LOCAL_BINS}
 EOF
 else 
