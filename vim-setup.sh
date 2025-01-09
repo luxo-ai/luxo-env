@@ -1,24 +1,26 @@
 #!/bin/bash
 
-VIM_PLUGIN_MANAGER="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+source color.sh
+source luxo.conf
+
+echo "== vim-setup.sh =="
 
 if ! command -v vim >/dev/null 2>&1;
 then 
-    echo "installing vim..."
+    echo "Installing vim..."
     brew install vim
 fi 
 
 
 if [[ ! -f "$HOME/.vim/autoload/plug.vim" ]];
 then
-    echo "adding vim plugin manager"
+    echo "Adding vim plugin manager"
     curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs "$VIM_PLUGIN_MANAGER"
 fi
 
-echo "setting up vimrc and overwriting if exists"
+print_yellow "Setting up .vimrc and overwriting if exists"
 
 cat << EOF > "$HOME/.vimrc"
-
 call plug#begin('~/.vim/plugged')
 Plug 'ayu-theme/ayu-vim'
 call plug#end()
@@ -45,3 +47,5 @@ EOF
 
 # install plugins
 vim +'PlugInstall --sync' +qa
+
+print_green "Done"

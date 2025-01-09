@@ -1,3 +1,9 @@
 # luxo-env
 
-in case you want to copy my dev environment
+Use my development environment!
+
+### How to use
+
+```bash
+./setup.sh
+```
