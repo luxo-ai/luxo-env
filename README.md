@@ -1,4 +1,4 @@
-# luxo-env
+# luxo-env 🌴
 
 Use my development environment!
 
