@@ -37,6 +37,15 @@ git config --global credential.helper "osxkeychain"
 echo "Setting default branch to main"
 git config --global init.defaultBranch "main"
 echo "Setting up signed commits"
-git config --global commit.gpgsign true
+# git config --global commit.gpgsign true
+# GPG_KEY=$(gpg --list-secret-keys --keyid-format LONG | grep sec | awk '{print $2}' | sed 's/.*\///')
+#if [ -z "$GPG_KEY" ]; then
+#  echo "No GPG key found. Generating a new key..."
+#  gpg --quick-generate-key "Your Name <your.email@example.com>" default default 1y
+#  GPG_KEY=$(gpg --list-secret-keys --keyid-format LONG | grep sec | awk '{print $2}' | sed 's/.*\///')
+#  echo "GPG key generated: $GPG_KEY"
+#fi
+# git config --global user.signingkey "$GPG_KEY" 
+
 
 print_green "Done"
