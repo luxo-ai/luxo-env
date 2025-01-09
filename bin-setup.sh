@@ -38,10 +38,13 @@ mkdir -p ${LOCAL_BINS_DIR}
 # add bin to path (via profile) if not already there
 if [[ ":$PATH:" != *":${LOCAL_BINS_DIR}:"* ]]; 
 then
+    
     cat << EOF >> ${ZSH_PROFILE_PATH}
+
 # === added automatically by bin-setup.sh === 
 export PATH=${PATH:+"$PATH:"}${LOCAL_BINS_DIR}
 # === added automatically by bin-setup.sh ===
+
 EOF
 else 
     print_yellow "Local bin already on path"

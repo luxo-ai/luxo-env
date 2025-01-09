@@ -20,11 +20,13 @@ then
     mkdir -p "$HOME/.nvm"
     echo "export NVM_DIR=\"$HOME/.nvm\"" >> ${ZSH_PROFILE_PATH}
     cat << EOF >> ${ZSH_PROFILE_PATH}
+
 # === added automatically by js-setup.sh === 
 export NVM_DIR="\$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # === added automatically by js-setup.sh ===
+
 EOF
 else
     print_yellow "nvm already installed"

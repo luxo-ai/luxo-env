@@ -50,9 +50,9 @@ for RUNCOM_FILE in ${PREZTO_DIR}/runcoms/^README.md(.N); do
     if [ -e "$TARGET_FILE" ]; then
         # append the contents of $rcfile to $target if not already present
         if ! grep -qF "$(cat $RUNCOM_FILE)" "$TARGET_FILE"; then
-            echo "# === added automatically by zsh-setup.sh ===" >> "$TARGET_FILE"
+            echo "\n# === added automatically by zsh-setup.sh ===" >> "$TARGET_FILE"
             cat "$RUNCOM_FILE" >> "$TARGET_FILE"
-            echo "# === added automatically by zsh-setup.sh ===" >> "$TARGET_FILE"
+            echo "# === added automatically by zsh-setup.sh ===\n" >> "$TARGET_FILE"
         fi
     else
       # if the file doesn't exist, create a symlink
@@ -62,9 +62,11 @@ done
 
 echo "Enabling theme"
 cat << EOF >> "$HOME/.zpreztorc"
+
 # === added automatically by the zsh-setup.sh ===
 zstyle ':prezto:module:editor' key-bindings 'vi'
 # === added automatically by the zsh-setup.sh ===
+
 EOF
 
 print_green "Done"
