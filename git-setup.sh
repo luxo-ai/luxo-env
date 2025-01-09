@@ -46,6 +46,7 @@ echo "Setting up signed commits"
 #  echo "GPG key generated: $GPG_KEY"
 #fi
 # git config --global user.signingkey "$GPG_KEY" 
+# git config --global core.editor vim
 
 
 print_green "Done"
