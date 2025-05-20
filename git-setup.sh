@@ -39,6 +39,7 @@ git config --global init.defaultBranch "main"
 echo "Setting default editor"
 git config --global core.editor "vim"
 echo "Setting up signed commits"
+# git config --global gpg.program $(which gpg)
 # git config --global commit.gpgsign true
 # GPG_KEY=$(gpg --list-secret-keys --keyid-format LONG | grep sec | awk '{print $2}' | sed 's/.*\///')
 #if [ -z "$GPG_KEY" ]; then
