@@ -65,6 +65,8 @@ cat << EOF >> "$HOME/.zpreztorc"
 
 # === added automatically by the zsh-setup.sh ===
 zstyle ':prezto:module:editor' key-bindings 'vi'
+zstyle ':prezto:module:prompt' theme 'smiley'
+zstyle ':prezto:module:prompt' pwd-length 'long'
 # === added automatically by the zsh-setup.sh ===
 
 EOF

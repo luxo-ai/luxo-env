@@ -66,7 +66,7 @@ sleep 3
 ./git-setup.sh
 sleep 3
 
-./zsh-setup.sh
+#./zsh-setup.sh
 sleep 3
 
 if [[ "${NO_PYTHON}" == false ]]; 

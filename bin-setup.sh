@@ -42,7 +42,7 @@ then
     cat << EOF >> ${ZSH_PROFILE_PATH}
 
 # === added automatically by bin-setup.sh === 
-export PATH=${PATH:+"$PATH:"}${LOCAL_BINS_DIR}
+export PATH=${PATH:+"\$PATH:"}${LOCAL_BINS_DIR}
 # === added automatically by bin-setup.sh ===
 
 EOF

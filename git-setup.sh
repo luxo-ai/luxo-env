@@ -36,6 +36,8 @@ echo "Setting credentials helper"
 git config --global credential.helper "osxkeychain"
 echo "Setting default branch to main"
 git config --global init.defaultBranch "main"
+echo "Setting default editor"
+git config --global core.editor "vim"
 echo "Setting up signed commits"
 # git config --global commit.gpgsign true
 # GPG_KEY=$(gpg --list-secret-keys --keyid-format LONG | grep sec | awk '{print $2}' | sed 's/.*\///')
@@ -46,7 +48,6 @@ echo "Setting up signed commits"
 #  echo "GPG key generated: $GPG_KEY"
 #fi
 # git config --global user.signingkey "$GPG_KEY" 
-# git config --global core.editor vim
 
 
 print_green "Done"
